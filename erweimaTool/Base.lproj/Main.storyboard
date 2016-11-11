@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UIk-N1-p4G">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="AkY-Go-Oqa">
+            <objects>
+                <navigationController id="83N-cU-bgS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zdw-4O-kub"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U1T-bV-aTO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5DE-xD-fSq" kind="relationship" relationship="rootViewController" id="3Aa-25-eHh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsU-JM-I5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="351"/>
+        </scene>
+        <!--AlBM View Controller-->
+        <scene sceneID="3KC-zD-kFT">
+            <objects>
+                <viewController id="5DE-xD-fSq" customClass="AlBMViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sF5-zK-YX4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ovg-dX-8gY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wzO-uj-o5I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZV-PU-flW">
+                                <rect key="frame" x="130" y="214" width="60" height="30"/>
+                                <state key="normal" title="读取相册"/>
+                                <connections>
+                                    <action selector="fromAluburmAction:" destination="5DE-xD-fSq" eventType="touchUpInside" id="oMH-R2-IRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pg3-Lq-aoA">
+                                <rect key="frame" x="123" y="409" width="75" height="30"/>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <segue destination="S4q-Ow-9ST" kind="push" id="nkM-lf-URH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="STU-e8-d1P"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIt-FU-50O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="332"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5zp-ty-bcJ">
+            <objects>
+                <navigationController id="s8F-Pa-yLj" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HVV-xY-m26">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="S4q-Ow-9ST" kind="relationship" relationship="rootViewController" id="bzK-vC-aDG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k17-ti-h7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="332"/>
+        </scene>
+        <!--Out Put View Controller-->
+        <scene sceneID="le2-mF-gxJ">
+            <objects>
+                <viewController id="S4q-Ow-9ST" customClass="OutPutViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GeE-xn-fOx"/>
+                        <viewControllerLayoutGuide type="bottom" id="fNW-3T-Im2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bBZ-Ec-465">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-c7-UW8">
+                                <rect key="frame" x="40" y="195" width="240" height="240"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZK0-yB-iWw">
+                                <rect key="frame" x="114" y="480" width="75" height="30"/>
+                                <state key="normal" title="保存到相册"/>
+                                <connections>
+                                    <action selector="saveToAlburmAction:" destination="S4q-Ow-9ST" eventType="touchUpInside" id="Q3g-Nm-hDA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f5q-gB-B2R">
+                                <rect key="frame" x="50" y="113" width="161" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCl-2r-sJj">
+                                <rect key="frame" x="235" y="113" width="30" height="30"/>
+                                <state key="normal" title="生成"/>
+                                <connections>
+                                    <action selector="outputAction:" destination="S4q-Ow-9ST" eventType="touchUpInside" id="p6p-6Y-fVE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CnF-5H-14B"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imgView" destination="B0M-c7-UW8" id="rnT-2J-5UD"/>
+                        <outlet property="urlFiled" destination="f5q-gB-B2R" id="btC-Vv-vLK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHx-Jx-md0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1720" y="320"/>
+        </scene>
+        <!--二维码扫描-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THl-bp-LIy">
+                                <rect key="frame" x="40" y="221" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1Z-Gj-6K5">
+                                <rect key="frame" x="124" y="504" width="63" height="30"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UK-ls-rGC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码扫描" id="UM1-5K-drO">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="cEc-ZF-IHx">
+                            <connections>
+                                <action selector="lightClick:" destination="BYZ-38-t0r" id="9cs-0D-gL0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="相册" id="6Lg-wG-eIk">
+                            <connections>
+                                <segue destination="5DE-xD-fSq" kind="push" id="4dn-OT-WAo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="button" destination="l1Z-Gj-6K5" id="6Xm-MT-6ff"/>
+                        <outlet property="fromAlbum" destination="6Lg-wG-eIk" id="ePb-qg-Fqu"/>
+                        <outlet property="lightButton" destination="cEc-ZF-IHx" id="fyC-7T-MUB"/>
+                        <outlet property="scanFrameView" destination="THl-bp-LIy" id="ECc-eh-AIo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="99" y="351"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B2F-3U-bmd">
+            <objects>
+                <navigationController id="UIk-N1-p4G" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DfP-hZ-rB4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K0E-zB-6mg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2s-Ut-yM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="351"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4dn-OT-WAo"/>
+        <segue reference="nkM-lf-URH"/>
+    </inferredMetricsTieBreakers>
+</document>
